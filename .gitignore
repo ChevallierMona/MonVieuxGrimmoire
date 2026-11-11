@@ -19,3 +19,5 @@ yarn-debug.log*
 # Fichiers propres au système
 .DS_Store
 Thumbs.db
+# Images envoyées par les utilisateurs
+Backend/images/
