@@ -22,5 +22,8 @@ app.use((req, res, next) => {
   );
   next();
 });
+app.get('/api/test', (req, res) => {
+  res.status(200).json({ message: 'Le serveur fonctionne !' });
+});
 
 module.exports = app;
