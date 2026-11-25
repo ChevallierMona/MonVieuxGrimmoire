@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const userRoutes = require('./routes/user');
+
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -22,8 +24,7 @@ app.use((req, res, next) => {
   );
   next();
 });
-app.get('/api/test', (req, res) => {
-  res.status(200).json({ message: 'Le serveur fonctionne !' });
-});
+app.use('/api/auth', userRoutes);
+
 
 module.exports = app;
